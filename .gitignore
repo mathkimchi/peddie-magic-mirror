@@ -1,0 +1,5 @@
+/Calendars/*.ics
+*.txt
+secure.json
+
+data
