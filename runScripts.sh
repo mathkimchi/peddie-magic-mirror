@@ -14,4 +14,4 @@ python3 load_scripts/menu.py
 python3 load_scripts/menu2.py
 
 #Load Weather
-python3 load_scripts/weather.py;
+python3 load_scripts/weather.py
