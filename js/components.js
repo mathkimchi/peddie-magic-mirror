@@ -1,9 +1,38 @@
 
 customElements.define("time-display-widget", class extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `
-            <div id='clock' class='currentblock'></div>
-        `;
+        var clock = document.createElement("div");
+        clock.id = "clock";
+        clock.classList.add("currentblock");
+        this.appendChild(clock);
+
+        function updateClock(clock) {
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let session = "AM";
+
+            if (hh == 0) {
+                hh = 12;
+            }
+            if (hh >= 12) {
+                if (hh != 12) hh = hh - 12;
+                session = "PM";
+            }
+
+            hh = (hh < 10) ? hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+
+            let time = hh + ":" + mm + " " + session;
+
+            // document.getElementById("clock").innerText = time;
+            clock.innerText = time;
+
+            // recursively make sure the next updateClock is called again
+            let t = setTimeout(function () { updateClock(clock) }, 1000);
+        }
+
+        updateClock(clock);
     }
 });
 
@@ -33,19 +62,37 @@ customElements.define("pfs-menu-widget", class extends HTMLElement {
                 Menu
     
             </h3>
-            <div><code class="language-python match-braces menu" id="portfolio-code2"> </code></div>
+            <div><code class="language-python match-braces menu" id="pfs-menu-list"> </code></div>
         `;
+
+
+        fetch("data/menu2.txt")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Bad Response")
+                }
+                return response.text()
+            })
+            .then(text => document.getElementById("pfs-menu-list").innerText = text)
+            .catch(errror => document.getElementById("pfs-menu-list").innerText = "Unable to fetch portfolio, try again later")
     }
 });
 
 customElements.define("graduation-countdown-widget", class extends HTMLElement {
     connectedCallback() {
+        //calculates the days until graduation
+        var deadline = new Date("May 25, 2025").getTime(); //change this to set the graduation date
+        var now = new Date().getTime();
+        var t = deadline - now;
+        var days = Math.ceil(t / (1000 * 60 * 60 * 24)); // round up on the date b/c it counts the time by millis (ex. Sept 30, 11:59:59 = 1000 millis until Oct, but displays 1 full day)
+        if (days < 0) days += 365; //after graduation, start counting down to next year (dont display negative)
+
         this.innerHTML = `
             <h4>
                 Days Until Graduation
             </h4>
             <!-- <div> <code class="language-python match-braces counter" id="portfolio-code6"> </code></div> -->
-            <div id='counterdays' class='counter'></div>
+            <div id='counterdays' class='counter'>` + days + " Days Left!" + `</div>
         `;
     }
 });
