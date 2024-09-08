@@ -13,7 +13,7 @@ customElements.define("weather-widget", class extends HTMLElement {
         this.innerHTML = `
             <div class="weather-grid-container">
                 <div class="weather-grid-item1">
-                    <img src="weather.png" class="weather_img">
+                    <img src="res/weather.png" class="weather_img">
                 </div>
                 <div class="weather-grid-item2">
                     <code class="language-python match-braces temp" id="portfolio-code5temp">64℉</code>
@@ -54,7 +54,7 @@ customElements.define("standard-side-bar", class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div class="first-column">
-                <img src="peddielogo.png" class="logo alt=" peddie logo>
+                <img src="res/peddielogo.png" class="logo alt=" peddie logo>
                 <time-display-widget></time-display-widget>
                 <weather-widget></weather-widget>
                 <pfs-menu-widget></pfs-menu-widget>

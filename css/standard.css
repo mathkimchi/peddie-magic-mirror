@@ -1,9 +1,5 @@
 :root {
-    --blue-team-color: #0000a2;
-    --gold-team-color: #cc9800;
-
-    /* TODO */
-    --neutral-color: gray;
+    --peddie-gold: #cc9800;
 }
 
 body {
@@ -45,42 +41,37 @@ a:hover {
     background: #555;
 }
 
-h1 {
-    color: var(--neutral-color);
-    font-weight: bold;
-    font-size: 100px;
-    font-family: 'Brandon Grotesque';
-}
-
 /*h2 is the class created to style the Magic Mirror div box located at the top of the page*/
 h2 {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-weight: bold;
-    font-size: 80px;
+    font-size: 60px;
     font-family: 'Brandon Grotesque';
+    padding-left: 195px;
+    /*This padding left goes hand in hand with the padding left under the weather class since they are on the same axis*/
 }
 
 /*h3 is the class created to style the Menu div box located on the left hand side of the page */
 h3 {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-family: 'Brandon Grotesque';
     text-align: center;
     font-size: 23px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 25px;
+    padding-top: 20px;
 
 }
 
 /*h4 is the class created to style the Days until graduation div box loacted right underneath the menu div box on the left hand side of the page */
 h4 {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-family: 'Brandon Grotesque';
     text-align: center;
     font-size: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 25px;
+    padding-top: 5px;
     /* text-decoration: underline; */
 }
 
@@ -91,7 +82,7 @@ h4 {
     width: 25%;
     /*1/4 of the non-mirror side*/
     padding-top: 85px;
-    padding-left: 100px;
+    padding-left: 120px;
     float: left;
     text-align: center;
 
@@ -101,37 +92,21 @@ h4 {
     width: 75%;
     /*3/4 of the mirror side*/
     padding-top: 85px;
-    padding-right: 100px;
     float: right;
     text-align: center;
     display: inline;
 }
 
 /*we used the grid feature to place the different feeds in various sections on the mirror side of the monitor */
-/* Grid container used forthe scores */
+
 .grid-container {
     display: grid;
-    width: min-content;
-    margin: auto;
-}
 
-/* Grid container used for the main body */
-.main-grid-container {
-    display: grid;
-    padding-top: 45px;
-    padding-left: 80px;
-}
-
-.main-grid-container p {
-    color: var(--neutral-color);
-    font-family: 'Brandon Grotesque';
-    font-size: 24px;
-    margin-bottom: 0px;
 }
 
 /*this just specifies how we want the elements in our grid to be styled*/
 .grid-item {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-family: 'Brandon Grotesque';
     font-size: 23px;
 
@@ -139,7 +114,7 @@ h4 {
 
 /* p vs p2 - p is usuallt the title or the bigger text and p2 is the smaller text*/
 .grid-item p {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-family: 'Brandon Grotesque';
     text-align: center;
     font-size: 23px;
@@ -147,7 +122,7 @@ h4 {
 }
 
 .grid-item p2 {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-family: 'Brandon Grotesque';
     text-align: center;
     font-size: 23px;
@@ -156,20 +131,28 @@ h4 {
 
 }
 
-/*item 1 corresponds to the bottom left of the main display (schedule)*/
-.grid-item1 {
+/*item 1 corresponds to the time, daily schedule, and athletics schedule that are located on the left side of the mirror side*/
+.item1 {
     grid-column: 1;
+    grid-row: 1;
+    padding-left: 50px;
 }
 
-/*item 2 corresponds to the bottom center of the main display (photo stream?)*/
-.grid-item2 {
-    grid-column: 2;
+/*item 2 currently doesn't correspond to anything because we are stacking the athletics schedule right underneath the daily schedule and expanding 
+  * item 1 to essentially span the entire left side of the mirror side.*/
+.item2 {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 45x;
+    padding-top: 5px;
     /* display:inline-flex; */
 }
 
-/*item 3 corresponds to the bottom right of the main display (map?)*/
-.grid-item3 {
+/*item 3 corresponds to the Upcoming Events and Pictures of the week section that are located on the right side of the mirror side*/
+.item3 {
     grid-column: 3;
+    grid-row: 1 / span 2;
+
 }
 
 /*the calligram class is used to style the daily schedule pictures which are changed each period*/
@@ -195,7 +178,7 @@ h4 {
 
 /*this feature has been removed for now but this was used to style the div box which featured what the current block is*/
 .currentblock {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-size: 17px;
     font-family: sans-serif;
     display: inline-flex;
@@ -226,15 +209,70 @@ h4 {
     font-size: 8px;
     font-family: sans-serif;
     display: inline-flex;
-    /* padding-right:220px; */
-    margin-left: auto;
+    padding-right: 220px;
     text-align: left;
     text-justify: inter-word;
 }
 
+/*the counter class is used to style the text in the counter.txt  */
+.counter {
+    color: white;
+    font-size: 17px;
+    font-family: sans-serif;
+    display: inline-flex;
+    text-align: center;
+    vertical-align: top;
+}
+
+/*the student_section class is used to style the pictues from the Flickr feed for pictures of the week  */
+.student_section {
+    color: var(--peddie-gold);
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 20px;
+    padding-right: 170px;
+}
+
+.student_section2 {
+    padding-top: 5px;
+    padding-right: 210px;
+}
+
+.magic-mirror {
+    display: inline-flex;
+}
+
+.embed-responsive {
+    height: 240px !important;
+
+}
+
+.embed-responsive-item {
+    height: 240px !important;
+
+}
+
+/*the signature class is used to style the text telling students where to submit their pictures */
+.signature {
+    color: var(--peddie-gold);
+    font-family: sans-serif;
+    text-align: right;
+    font-size: 8px;
+    padding-right: 260px;
+    vertical-align: top;
+    position: relative;
+    bottom: 30px !important;
+    /* padding-top:5px; */
+}
+
+.schedule {
+    display: flex;
+    margin-left: 25px;
+}
+
 /*the weather class is used to style the text in the weather.txt  */
 .weather {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-size: 12px;
     font-family: sans-serif;
     display: inline-flex;
@@ -253,7 +291,7 @@ h4 {
 
 /*used in temperature display*/
 .temp {
-    color: var(--neutral-color);
+    color: var(--peddie-gold);
     font-size: 48px;
     font-family: sans-serif;
     display: inline-flex;
@@ -288,263 +326,4 @@ h4 {
     grid-column: 3;
     justify-self: left;
     padding: 5px;
-}
-
-/*the counter class is used to style the text in the counter.txt  */
-.counter {
-    color: white;
-    font-size: 17px;
-    font-family: sans-serif;
-    display: inline-flex;
-    text-align: center;
-    vertical-align: top;
-}
-
-/*the student_section class is used to style the pictues from the Flickr feed for pictures of the week  */
-.student_section {
-    padding-right: 0px;
-}
-
-.student_section2 {
-    padding-top: 5px;
-    padding-right: 0px;
-}
-
-.title-display {
-    display: inline-flex;
-}
-
-.embed-responsive {
-    height: 240px !important;
-
-}
-
-.embed-responsive-item {
-    height: 240px !important;
-
-}
-
-/*the signature class is used to style the text telling students where to submit their pictures */
-.signature {
-    color: var(--neutral-color);
-    font-family: sans-serif;
-    text-align: right;
-    font-size: 8px;
-    padding-right: 260px;
-    vertical-align: top;
-    position: relative;
-    bottom: 30px !important;
-    /* padding-top:5px; */
-}
-
-.schedule {
-    display: flex;
-    margin-left: 25px;
-}
-
-#qr-link {
-    max-width: 200px;
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-}
-
-#qr-label {
-    color: var(--neutral-color);
-    font-size: 10px;
-}
-
-/*the score display for the teams*/
-.score {
-    font-size: 150px;
-    /* font-family: sans-serif; */
-    /* display: inline-flex; */
-    vertical-align: center;
-    /* padding-left: 0px; */
-    /*this works together with the padding left located in h2 because the weather and Magic Mirror text are on the same axis*/
-    /* padding-top: 0px; */
-    /* line-height: 200px; */
-}
-
-/*grid items for score*/
-.blue-score-img {
-    grid-column: 1;
-    grid-row: 1;
-    padding-left: 100px;
-    margin-top: 25px;
-    vertical-align: middle;
-}
-
-.blue-score-val {
-    grid-column: 2;
-    grid-row: 1;
-    text-align: left;
-    vertical-align: middle;
-
-    /* bt team name and score number */
-    padding-left: 20px;
-    /* bt score number and colon */
-    padding-right: 40px;
-}
-
-.score-seperator {
-    grid-column: 3;
-    grid-row: 1;
-    text-align: left;
-    margin-top: 20px;
-    vertical-align: middle;
-}
-
-.gold-score-val {
-    grid-column: 4;
-    grid-row: 1;
-    text-align: right;
-    vertical-align: middle;
-
-    /* bt team name and score number */
-    padding-right: 20px;
-    /* bt score number and colon */
-    padding-left: 40px;
-}
-
-.gold-score-img {
-    grid-column: 5;
-    grid-row: 1;
-    padding-right: 100px;
-    margin-top: 25px;
-    vertical-align: middle;
-}
-
-.school-img {
-    height: 200px;
-}
-
-/* grid for Blair-Day athletic events display */
-.event-grid {
-    display: grid;
-    /* grid-gap: 1px; */
-    /* background-color: #ffffff; */
-    border: 1px solid #ffffff;
-
-    /* grid-template-columns: auto auto auto auto; */
-}
-
-.event-name {
-    grid-column: 1;
-    border-top: 1px solid gray;
-}
-
-.event-location {
-    grid-column: 2;
-    border-top: 1px solid gray;
-}
-
-/* .event-time {
-    grid-column: 3;
-}
-
-.event-state {
-    grid-column: 4;
-} */
-
-.event-state.result-blue {
-    /* make it a little brighter bc optical illusion */
-    color: #7575ff;
-    font-weight: bold;
-}
-
-.event-state.result-gold {
-    /* make it a little brighter bc optical illusion */
-    color: #cc9800;
-    font-weight: bold;
-}
-
-.event-state.result-tie {
-    color: #a0a0a0;
-}
-
-.event-state.result-ongoing {
-    color: #159e3e;
-}
-
-.event-state.result-scheduled {
-    color: #ff0000;
-}
-
-/* event labels */
-.event-grid>p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #141514;
-
-    color: var(--neutral-color);
-    font-family: 'Brandon Grotesque';
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 0;
-}
-
-/* event entries */
-.event-grid>p2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #282928;
-
-    color: #ffffff;
-    font-family: 'Brandon Grotesque';
-    text-align: center;
-    font-size: 12px;
-}
-
-.blue-color {
-    color: #0000a2;
-}
-
-.gold-color {
-    color: #cc9800;
-}
-
-/* Use a media query to add a breakpoint at 1200px: */
-@media screen and (max-width: 1200px) {
-    /* assume this is mobile */
-
-    .first-column {
-        display: none;
-        /* visibility: hidden;
-        width: 0%; */
-    }
-
-    .second-column {
-        width: 100%;
-        padding-left: 0%;
-        padding-right: 0%;
-    }
-
-    .main-grid-container {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .blue-score-img {
-        display: none;
-    }
-
-    .gold-score-img {
-        display: none;
-    }
-
-    /* event labels */
-    .event-grid>p {
-        font-size: 40px;
-    }
-
-    /* event entries */
-    .event-grid>p2 {
-        font-size: 30px;
-    }
 }
