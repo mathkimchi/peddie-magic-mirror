@@ -45,7 +45,7 @@ customElements.define("weather-widget", class extends HTMLElement {
                     <img src="res/weather.png" class="weather_img">
                 </div>
                 <div class="weather-grid-item2">
-                    <code class="language-python match-braces temp" id="portfolio-code5temp">64°F</code>
+                    <code class="language-python match-braces temp" id="portfolio-code5temp">64&deg;F</code>
                 </div>
                 <div class="weather-grid-item3">
                     <code class="language-python match-braces weather" id="portfolio-code5"></code>
