@@ -1,7 +1,7 @@
-/Calendars/*.ics
 *.txt
 secure.json
 
 data
+**/__pycache__
 
 shell.nix

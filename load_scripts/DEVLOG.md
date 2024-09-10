@@ -63,3 +63,16 @@ Added meta tag to disable caching.
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 ```
+
+### Fixing the Data Collection
+
+2024/09/09
+
+Because peddie marketing decided to change the peddie website, most of our load scripts broke.
+
+I asked someone else to figure out the menu, and they emailed peddie communications asking how they get their data.
+
+I am looking at the source code of the [peddie athletics schedule](peddie.org/peddie-education/athletics-schedule), and I think they made it hard to scrape data on purpose.
+Also, I can't figure out where they are getting their data from.
+When I do inspect element then Debugger then Sources (in firefox), I think I can see the source code before the JS scripts do stuff to it.
+For the athletics, it seems like the HTML itself is updated on the serverside periodically.
