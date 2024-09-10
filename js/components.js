@@ -66,7 +66,7 @@ customElements.define("pfs-menu-widget", class extends HTMLElement {
         `;
 
 
-        fetch("data/menu2.txt")
+        fetch("data/menu.txt")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Bad Response")

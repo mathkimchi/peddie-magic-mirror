@@ -13,6 +13,7 @@ with open('data/menu.ics', 'wb') as file:
 with open('data/menu.ics', 'r') as file:
     calendar = icalendar.Calendar.from_ical(file.read())
 
+# not currently used
 menu_events = []
 with open('data/menu.json','w') as file:
     for (index, event) in enumerate(calendar.walk('VEVENT')):
@@ -26,5 +27,16 @@ with open('data/menu.json','w') as file:
             break
     file.write(json.dumps(menu_events, indent=4))
 
-f = open("data/menu.json", "r")
-print(f.read())
+with open('data/menu.txt','w') as file:
+    text = ""
+    for (index, event) in enumerate(calendar.walk('VEVENT')):
+        text += event.get("SUMMARY") + "\n"
+        text += event.get("DESCRIPTION") + "\n\n"
+
+        # break if this is last with redundant safety
+        if (event.get("SUMMARY")=="Dinner") or (event.get("SUMMARY")=="Family Style Dinner") or (index>=2):
+            break
+    file.write(text)
+
+# f = open("data/menu.json", "r")
+# print(f.read())
