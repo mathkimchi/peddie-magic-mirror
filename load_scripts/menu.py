@@ -3,7 +3,7 @@ import icalendar
 import json
 
 url = "https://peddie.org/events/month/?tribe_eventcategory%5B0%5D=250&ical=1"
-response = requests.get(url)
+response = requests.get(url, allow_redirects=True)
 
 # print (response.text)
 
