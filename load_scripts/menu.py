@@ -14,10 +14,12 @@ with open('data/menu.ics', 'r') as file:
 
 text = ""
 with open('data/menu.txt','w') as file:
-    for event in calendar.walk('VEVENT'):
+    for (index, event) in enumerate(calendar.walk('VEVENT')):
         text += event.get("SUMMARY") + "\n"
         text += event.get("DESCRIPTION") + "\n"
-        if event.get("SUMMARY")=="Dinner" or event.get("SUMMARY")=="Family Style Dinner":
+
+        # break if this is last with redundant safety
+        if (event.get("SUMMARY")=="Dinner") or (event.get("SUMMARY")=="Family Style Dinner") or (index>=2):
             break
     file.write(text)
 
