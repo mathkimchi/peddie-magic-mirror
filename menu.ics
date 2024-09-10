@@ -1,0 +1,220 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Peddie School - ECPv6.6.0.1//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:The Peddie School
+X-ORIGINAL-URL:https://peddie.org
+X-WR-CALDESC:Events for The Peddie School
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20240310T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20241103T060000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240910T071500
+DTEND;TZID=America/New_York:20240910T080000
+DTSTAMP:20240910T142555
+CREATED:20240909T180304Z
+LAST-MODIFIED:20240909T180305Z
+UID:10000918-1725952500-1725955200@peddie.org
+SUMMARY:Breakfast
+DESCRIPTION:Scrambled Eggs\, Challah French Toast\, Hash Browns\, Fresh Mixed Fruit\, Yogurt and Muffins
+URL:https://peddie.org/event/breakfast-16/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240910T113000
+DTEND;TZID=America/New_York:20240910T134500
+DTSTAMP:20240910T142555
+CREATED:20240909T180429Z
+LAST-MODIFIED:20240909T180430Z
+UID:10000919-1725967800-1725975900@peddie.org
+SUMMARY:Lunch
+DESCRIPTION:Salad Bar\, Deli Station\, Pasta – Roasted Garlic with Lemon & Oil/Vegetarian Station\, Rice & Beans\, Chicken or Vegan Cheddar Wraps\, Curry Vegetables and Fresh Mixed Fruit
+URL:https://peddie.org/event/lunch-16/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240910T180000
+DTEND;TZID=America/New_York:20240910T190000
+DTSTAMP:20240910T142555
+CREATED:20240909T180549Z
+LAST-MODIFIED:20240909T180617Z
+UID:10000920-1725991200-1725994800@peddie.org
+SUMMARY:Dinner
+DESCRIPTION:Salad Bar\, Pasta Station\, Braised Oxtails\, Honey Ancho Chicken or Tofu\, Rice\, Vegetables\, Rolls and Butter\, Blue Plate Special: Crab Shrimp Fritters and Fresh Mixed Fruit
+URL:https://peddie.org/event/dinner-18/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240911T071500
+DTEND;TZID=America/New_York:20240911T083000
+DTSTAMP:20240910T142555
+CREATED:20240909T180713Z
+LAST-MODIFIED:20240909T180714Z
+UID:10000921-1726038900-1726043400@peddie.org
+SUMMARY:Breakfast
+DESCRIPTION:Fried Eggs\, Scrambled Egg Bar\, Waffles Belgium\, Sausage\, Bagels\, Yogurt\, Smoothies and Fresh Mixed Fruit
+URL:https://peddie.org/event/breakfast-17/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240911T113000
+DTEND;TZID=America/New_York:20240911T132000
+DTSTAMP:20240910T142555
+CREATED:20240909T180820Z
+LAST-MODIFIED:20240909T180821Z
+UID:10000922-1726054200-1726060800@peddie.org
+SUMMARY:Lunch
+DESCRIPTION:Salad Bar\, Deli Station\, Pasta/Vegetarian Station\, Vegetables\, Sticky Rice\, Mongolian Style Beef or Seitan and Fresh Mixed Fruit
+URL:https://peddie.org/event/lunch-17/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240911T180000
+DTEND;TZID=America/New_York:20240911T190000
+DTSTAMP:20240910T142555
+CREATED:20240909T180941Z
+LAST-MODIFIED:20240909T180942Z
+UID:10000923-1726077600-1726081200@peddie.org
+SUMMARY:Dinner
+DESCRIPTION:Salad Bar\, Pasta Station & Rice\, Vegetables\, Shrimp Zoodles\, Meatloaf with Gravy\, Vegan Loaf\, Mashed Potatoes\, Rolls and Butter and Fresh Mixed Fruit
+URL:https://peddie.org/event/dinner-19/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240912T071500
+DTEND;TZID=America/New_York:20240912T080000
+DTSTAMP:20240910T142555
+CREATED:20240909T181158Z
+LAST-MODIFIED:20240909T181159Z
+UID:10000925-1726125300-1726128000@peddie.org
+SUMMARY:Breakfast
+DESCRIPTION:Scrambled Eggs\, Pancakes\, Diner Fries\, Pastries\, Fresh Mixed Fruit\, Yogurt and Muffins
+URL:https://peddie.org/event/breakfast-18/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240912T113000
+DTEND;TZID=America/New_York:20240912T134500
+DTSTAMP:20240910T142555
+CREATED:20240909T181330Z
+LAST-MODIFIED:20240909T181331Z
+UID:10000926-1726140600-1726148700@peddie.org
+SUMMARY:Lunch
+DESCRIPTION:Salad Bar\, Deli Station\, Rice\, Pasta – Ravioli/Vegetarian Station\, Vegetables\, Spanish Chorizo or Vegetarian Macaroni\, Croissants and Fresh Mixed Fruit
+URL:https://peddie.org/event/lunch-18/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240912T180000
+DTEND;TZID=America/New_York:20240912T190000
+DTSTAMP:20240910T142555
+CREATED:20240909T181533Z
+LAST-MODIFIED:20240909T181535Z
+UID:10000927-1726164000-1726167600@peddie.org
+SUMMARY:Dinner
+DESCRIPTION:Salad Bar\, Pasta Station & Rice\, Vegetables\, Creamy Tuscan Chicken or Tofu\, Basmati Rice\, Salmon Teriyaki\, Blue Plate Special: Funnel Cakes\, Rolls and Butter and Fresh Mixed Fruit
+URL:https://peddie.org/event/dinner-20/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240913T071500
+DTEND;TZID=America/New_York:20240913T083000
+DTSTAMP:20240910T142555
+CREATED:20240909T181636Z
+LAST-MODIFIED:20240909T182442Z
+UID:10000928-1726211700-1726216200@peddie.org
+SUMMARY:Breakfast
+DESCRIPTION:Fried and Scrambled Eggs\, Texas Toast French Toast\, Home Fries\, Bagels\, Yogurt\, Berries & Granola Parfaits and Fresh Mixed Fruit
+URL:https://peddie.org/event/breakfast-19/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240913T113000
+DTEND;TZID=America/New_York:20240913T134500
+DTSTAMP:20240910T142555
+CREATED:20240909T181742Z
+LAST-MODIFIED:20240909T182351Z
+UID:10000929-1726227000-1726235100@peddie.org
+SUMMARY:Lunch
+DESCRIPTION:Salad Bar\, Deli Station\, Rice\, Pasta/Vegetarian Station\, Vegetables\, Meatball or Vegan Meatball Sandwiches\, Rice & Beans\, Blue Plate Special: Frito Pie and Fresh Mixed Fruit
+URL:https://peddie.org/event/lunch-19/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240913T180000
+DTEND;TZID=America/New_York:20240913T190000
+DTSTAMP:20240910T142555
+CREATED:20240909T181857Z
+LAST-MODIFIED:20240909T182318Z
+UID:10000930-1726250400-1726254000@peddie.org
+SUMMARY:Dinner
+DESCRIPTION:Salad Bar\, Pasta Station & Rice\, Vegetables\, Stuffed Flounder\, Beef Stew\, Native Harvest Stew\, Roasted Potatoes\, Rolls and Butter\, Frozen Yogurt and Fresh Mixed Fruit
+URL:https://peddie.org/event/dinner-21/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240914T071500
+DTEND;TZID=America/New_York:20240914T083000
+DTSTAMP:20240910T142555
+CREATED:20240909T181938Z
+LAST-MODIFIED:20240909T181939Z
+UID:10000931-1726298100-1726302600@peddie.org
+SUMMARY:Breakfast
+DESCRIPTION:Scrambled Eggs\, Pancakes\, Hash Browns\, Pastries\, Yogurt and Fresh Mixed Fruit
+URL:https://peddie.org/event/breakfast-20/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240914T113000
+DTEND;TZID=America/New_York:20240914T132000
+DTSTAMP:20240910T142555
+CREATED:20240909T182034Z
+LAST-MODIFIED:20240909T182035Z
+UID:10000932-1726313400-1726320000@peddie.org
+SUMMARY:Lunch
+DESCRIPTION:Salad Bar\, Deli Station\, Rice\, Pasta/Vegetarian Station\, Vegetables\, Grilled BBQ Sandwiches\, Vegetable Lasagna and Fresh Mixed Fruit
+URL:https://peddie.org/event/lunch-20/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240914T180000
+DTEND;TZID=America/New_York:20240914T190000
+DTSTAMP:20240910T142555
+CREATED:20240909T182233Z
+LAST-MODIFIED:20240909T182235Z
+UID:10000933-1726336800-1726340400@peddie.org
+SUMMARY:Dinner
+DESCRIPTION:Salad Bar/Deli Station\, Pasta Station & Rice\, Pasta/Vegetarian Station\, Vegetables\, Chef’s Choice\, French Bread Pizza\, Vegetarian Pizza and Fresh Mixed Fruit
+URL:https://peddie.org/event/dinner-22/
+CATEGORIES:PFS Menus
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20240923T183000
+DTEND;TZID=America/New_York:20240923T191500
+DTSTAMP:20240910T142555
+CREATED:20240610T153313Z
+LAST-MODIFIED:20240826T143526Z
+UID:10000557-1727116200-1727118900@peddie.org
+SUMMARY:Family Style Dinner
+DESCRIPTION:
+URL:https://peddie.org/event/family-style-dinner-2/
+LOCATION:The Peddie School\, 201 South Main Street\, Hightstown\, NJ\, 08250\, United States
+CATEGORIES:PFS Menus,School Calendar
+END:VEVENT
+END:VCALENDAR
