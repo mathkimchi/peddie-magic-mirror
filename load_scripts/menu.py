@@ -1,22 +1,25 @@
-from bs4 import BeautifulSoup
-import requests 
-import time
+import requests
+import icalendar
 
-#while(True):
-file1 = open('menu.txt', 'w')
-file2 = open('menu.txt', 'w')
+url = "https://peddie.org/events/month/?tribe_eventcategory%5B0%5D=250&ical=1"
+response = requests.get(url)
 
-#get data
-data = requests.get('https://www.peddie.org/our-community/peddie-am-20')
+# print (response.text)
 
-#load data into bs4
-soup = BeautifulSoup(data.text, 'html.parser')
+with open('data/menu.ics', 'wb') as file:
+    file.write(response.content)
 
-menu = soup.find('div', {'class':'fsListItems'})
-menu2 = soup.find('div', {'class':'fsDescription'}).get_text("\n")
+with open('data/menu.ics', 'r') as file:
+    calendar = icalendar.Calendar.from_ical(file.read())
 
-print(menu2 + '\n')
-file1.write(menu2)
-file2.write(menu2)
-file1.close()
-file2.close()
+text = ""
+with open('data/menu.txt','w') as file:
+    for event in calendar.walk('VEVENT'):
+        text += event.get("SUMMARY") + "\n"
+        text += event.get("DESCRIPTION") + "\n"
+        if event.get("SUMMARY")=="Dinner" or event.get("SUMMARY")=="Family Style Dinner":
+            break
+    file.write(text)
+
+f = open("data/menu.txt", "r")
+print(f.read())
