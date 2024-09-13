@@ -76,3 +76,11 @@ I am looking at the source code of the [peddie athletics schedule](peddie.org/pe
 Also, I can't figure out where they are getting their data from.
 When I do inspect element then Debugger then Sources (in firefox), I think I can see the source code before the JS scripts do stuff to it.
 For the athletics, it seems like the HTML itself is updated on the serverside periodically.
+
+2024/09/13
+
+This is not Alvin Kim.
+
+We found out that emailing Peddie communications works. They whitelisted our IP so we shouldn't run into any other issues. The menu can now be displayed correctly and we can probably use the code for other events (not athletics).
+
+The Dosemasters are unopposed to a Dose integration. This is probably low-priority but could be fun. However, I am unsure how practical it would be since there is nowhere to display it on the actual magic mirror, especially if they wrote a lot. Maybe a Dose archive would be interesting?
