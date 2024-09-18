@@ -124,6 +124,14 @@ customElements.define("magic-mirror-title", class extends HTMLElement {
     }
 });
 
+customElements.define("scheldule-widget", class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <img src="./res/Screenshot_20240918_152200.png" alt="" srcset="" width="400">
+        `;
+    }
+});
+
 customElements.define("athletics-schedule-widget", class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
