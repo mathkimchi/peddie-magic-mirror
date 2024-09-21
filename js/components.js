@@ -1,3 +1,10 @@
+const scriptPath = document.currentScript.src;
+/** 
+ * Use this if linking relative to script and not html file
+ */
+const magicMirrorRootPath = scriptPath + "/../..";
+// console.log(parentPath);
+
 
 customElements.define("time-display-widget", class extends HTMLElement {
     connectedCallback() {
@@ -42,7 +49,7 @@ customElements.define("weather-widget", class extends HTMLElement {
         this.innerHTML = `
             <div class="weather-grid-container">
                 <div class="weather-grid-item1">
-                    <img src="res/weather.png" class="weather_img">
+                    <img src="${magicMirrorRootPath}/res/weather.png" class="weather_img">
                 </div>
                 <div class="weather-grid-item2">
                     <code class="language-python match-braces temp" id="portfolio-code5temp">64&deg;F</code>
@@ -66,7 +73,7 @@ customElements.define("pfs-menu-widget", class extends HTMLElement {
         `;
 
 
-        fetch("data/menu.txt")
+        fetch(magicMirrorRootPath + "/data/menu.txt")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Bad Response")
@@ -101,7 +108,7 @@ customElements.define("standard-side-bar", class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div class="first-column">
-                <img src="res/peddielogo.png" class="logo alt=" peddie logo>
+                <img src="${magicMirrorRootPath}/res/peddielogo.png" class="logo alt=" peddie logo>
                 <time-display-widget></time-display-widget>
                 <weather-widget></weather-widget>
                 <pfs-menu-widget></pfs-menu-widget>
@@ -127,7 +134,7 @@ customElements.define("magic-mirror-title", class extends HTMLElement {
 customElements.define("scheldule-widget", class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <img src="./res/Screenshot_20240918_152200.png" alt="" srcset="" width="400">
+            <img src="${magicMirrorRootPath}/res/Screenshot_20240918_152200.png" alt="" srcset="" width="400">
         `;
     }
 });
