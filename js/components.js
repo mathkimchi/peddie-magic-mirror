@@ -118,6 +118,20 @@ customElements.define("standard-side-bar", class extends HTMLElement {
     }
 });
 
+customElements.define("title-widget", class extends HTMLElement {
+    connectedCallback() {
+        // TODO: change the class
+        this.innerHTML = `
+            <div class='magic-mirror'>
+                <h2>
+                    ${this.getAttribute("title-string")}
+                </h2>
+                <div><code class="language-python match-braces weather" id="portfolio-code5"> </code></div>
+            </div>
+        `;
+    }
+});
+
 customElements.define("magic-mirror-title", class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -127,7 +141,7 @@ customElements.define("magic-mirror-title", class extends HTMLElement {
                 </h2>
                 <div><code class="language-python match-braces weather" id="portfolio-code5"> </code></div>
             </div>
-        `;
+            `;
     }
 });
 
