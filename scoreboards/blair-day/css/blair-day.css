@@ -1,0 +1,27 @@
+.school-img {
+    height: 200px;
+    grid-row: 1;
+}
+
+.score-value {
+    grid-row: 1;
+
+    color: #ffffff;
+    font-size: 240px;
+    font-family: sans-serif;
+    display: inline-flex;
+    vertical-align: center;
+    padding-left: 0px;
+    padding-top: 0px;
+    line-height: 200px;
+}
+
+#total-score-display {
+    display: grid;
+    width: min-content;
+    margin: auto;
+}
+
+#blair-score-value {
+    padding-left: 100px;
+}
