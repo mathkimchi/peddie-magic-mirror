@@ -1,10 +1,11 @@
 :root {
     --peddie-gold: #cc9800;
+    --peddie-blue: #0B233F;
 }
 
 body {
     margin: 0px;
-    background-color: black;
+    background-color: #15222d;
 }
 
 /* Standard body text style */
@@ -47,8 +48,9 @@ h2 {
     font-weight: bold;
     font-size: 60px;
     font-family: 'Brandon Grotesque';
-    padding-left: 195px;
-    /*This padding left goes hand in hand with the padding left under the weather class since they are on the same axis*/
+    /* padding-left: 195px; */
+    margin: auto;
+    /*This padding left used to be the same as with the weather but bc of layout changes it is just centred*/
 }
 
 /*h3 is the class created to style the Menu div box located on the left hand side of the page */
@@ -278,8 +280,6 @@ h4 {
     display: inline-flex;
     text-align: left;
     vertical-align: middle;
-    padding-left: 0px;
-    /*this works together with the padding left located in h2 because the weather and Magic Mirror text are on the same axis*/
     padding-top: 0px;
     line-height: 120%;
 }

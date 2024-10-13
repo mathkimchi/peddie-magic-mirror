@@ -5,21 +5,39 @@
 
 .score-value {
     grid-row: 1;
-
-    color: #ffffff;
+    width: max-content;
+    color: white;
     font-size: 240px;
     font-family: sans-serif;
-    display: inline-flex;
+    display: flex;
     vertical-align: center;
-    padding-left: 0px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
     padding-top: 0px;
     line-height: 200px;
 }
 
 #total-score-display {
     display: grid;
-    width: min-content;
+    grid-template-rows: max-content;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: max-content;
+    text-align: center;
     margin: auto;
+}
+
+.wins h4{
+    padding-top: 30px;
+    font-family: 'Brandon Grotesque', sans-serif;
+    font-style: italic;
+}
+
+#peddie-wins{
+    padding-right: 20px;
+}
+
+#blair-wins{
+    padding-left: 20px;
 }
 
 #blair-score-value {
@@ -28,19 +46,24 @@
 
 .event-grid {
     display: grid;
-    /* grid-gap: 1px; */
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-gap: 20px;
     /* background-color: #ffffff; */
-    border: 1px solid #ffffff;
+    border: none;
 
     /* grid-template-columns: auto auto auto auto; */
 }
 
 .event-name {
     grid-column: 1;
-    border-top: 1px solid gray;
+    border-top: 1px solid white;
+    color: white;
 }
 
 .event-location {
     grid-column: 2;
-    border-top: 1px solid gray;
+    border-top: 1px solid white;
+    color: white;
 }
