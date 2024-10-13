@@ -44,10 +44,22 @@ function registerEvent(eventName, eventLocation, eventState) {
 }
 
 function updateEvents(events) {
+    var peddieScore = 0;
+    var blairScore = 0;
+
     /// NOTE: `event` is a keyword
     for (eventObject of events) {
         registerEvent(eventObject["display-name"], eventObject["location"], eventObject["state"]);
+
+        if (eventObject["state"] == "peddie") {
+            peddieScore++;
+        } else if (eventObject["state"] == "blair") {
+            blairScore++;
+        }
     }
+
+    document.getElementById("peddie-score-value").innerText = peddieScore;
+    document.getElementById("blair-score-value").innerText = blairScore;
 }
 
 function update() {
