@@ -34,10 +34,21 @@
 
 #peddie-wins{
     padding-right: 20px;
+    text-align: center;
+}
+#peddie-wins p{
+    color: var(--peddie-gold);
+    text-align: center;
 }
 
 #blair-wins{
     padding-left: 20px;
+    text-align: center;
+}
+
+#blair-wins p{
+    color: white;
+    text-align: center;
 }
 
 #blair-score-value {
