@@ -17,8 +17,8 @@ title-widget {
     font-family: sans-serif;
     display: flex;
     vertical-align: center;
-    /* padding-left: 20px;
-    padding-right: 20px; */
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 0px;
     line-height: 200px;
 }
@@ -68,6 +68,8 @@ title-widget {
     padding-left: 20px;
     padding-right: 20px;
     grid-gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     /* background-color: #ffffff; */
     border: none;
 
