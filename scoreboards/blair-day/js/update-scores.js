@@ -10,10 +10,26 @@
 /// REVIEW: add a delayed state?
 /// NOTE: rn, time isn't being accounted for
 function registerEvent(eventName, eventLocation, eventState) {
+    console.log(eventName, eventLocation, eventState);
+
     var eventList;
     if (["tie", "peddie", "blair"].includes(eventState)) {
         // finished event
         eventList = document.getElementById("finished-event-list");
+
+        if (eventState == "peddie") {
+            eventList = document.getElementById("peddie-wins");
+            const newEventName = document.createElement("p");
+            newEventName.innerText = eventName;
+            eventList.appendChild(newEventName);
+        }
+        if (eventState == "blair") {
+            eventList = document.getElementById("blair-wins");
+            const newEventName = document.createElement("p");
+            newEventName.innerText = eventName;
+            eventList.appendChild(newEventName);
+        }
+        return;
     } else if (eventState == "ongoing") {
         // current event
         eventList = document.getElementById("current-event-list");
