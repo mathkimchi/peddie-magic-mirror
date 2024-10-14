@@ -1,3 +1,9 @@
+title-widget {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .school-img {
     height: 200px;
     grid-row: 1;
@@ -26,27 +32,28 @@
     margin: auto;
 }
 
-.wins h4{
+.wins h4 {
     padding-top: 30px;
     font-family: 'Brandon Grotesque', sans-serif;
     font-style: italic;
 }
 
-#peddie-wins{
+#peddie-wins {
     padding-right: 20px;
     text-align: center;
 }
-#peddie-wins p{
+
+#peddie-wins p {
     color: var(--peddie-gold);
     text-align: center;
 }
 
-#blair-wins{
+#blair-wins {
     padding-left: 20px;
     text-align: center;
 }
 
-#blair-wins p{
+#blair-wins p {
     color: white;
     text-align: center;
 }
