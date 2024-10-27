@@ -79,8 +79,92 @@ For the athletics, it seems like the HTML itself is updated on the serverside pe
 
 2024/09/13
 
-This is not Alvin Kim.
+This is not @mathkimchi.
 
 We found out that emailing Peddie communications works. They whitelisted our IP so we shouldn't run into any other issues. The menu can now be displayed correctly and we can probably use the code for other events (not athletics).
 
 The Dosemasters are unopposed to a Dose integration. This is probably low-priority but could be fun. However, I am unsure how practical it would be since there is nowhere to display it on the actual magic mirror, especially if they wrote a lot. Maybe a Dose archive would be interesting?
+
+2024/10/27 @mathkimchi
+
+For the coming blair day 2024, the raw csv events are:
+
+```txt
+Tennis - Junior Varsity Girls,Tennis Courts,Nov. 5- 3:30:00 PM
+Field Hockey - Junior Varsity Girls,Outdoor Turf Field,Nov. 9 - 11:30:00 AM
+Tennis - Varsity Girls,Tennis Courts,Nov. 9 - 11:30:00 AM
+Soccer - Varsity Girls,Back Field 4,Nov. 9 - 11:30:00 AM
+Soccer - Varsity Boys,Back Field 3,Nov. 9 - 11:30:00 AM
+Field Hockey - Varsity Girls,Outdoor Turf Field,Nov. 9 - 1:00:00 PM
+Soccer - Junior Varsity Boys,Back Field 3,Nov. 9 - 1:30:00 PM
+Soccer - Junior Varsity Girls,Back Field 4,Nov. 9 - 1:30:00 PM
+Football - Varsity Boys,Shuman Field,Nov. 9 - 2:00:00 PM
+Cross Country - Boys' and Girls' Varsity,Peddie Golf Course to Campus,Nov. 9 - 2:45:00 PM
+```
+
+I formatted them in json as best as I could (these will be the starting events.json, but that file is .gitignore'd):
+
+```json
+[
+    {
+        "display-name": "Tennis - Junior Varsity Girls",
+        "location": "Tennis Courts",
+        "time": "Nov. 5- 3:30:00 PM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Field Hockey - Junior Varsity Girls",
+        "location": "Outdoor Turf Field",
+        "time": "Nov. 9 - 11:30:00 AM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Tennis - Varsity Girls",
+        "location": "Tennis Courts",
+        "time": "Nov. 9 - 11:30:00 AM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Soccer - Varsity Girls",
+        "location": "Back Field 4",
+        "time": "Nov. 9 - 11:30:00 AM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Soccer - Varsity Boys",
+        "location": "Back Field 3",
+        "time": "Nov. 9 - 11:30:00 AM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Field Hockey - Varsity Girls",
+        "location": "Outdoor Turf Field",
+        "time": "Nov. 9 - 1:00:00 PM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Soccer - Junior Varsity Boys",
+        "location": "Back Field 3",
+        "time": "Nov. 9 - 1:30:00 PM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Soccer - Junior Varsity Girls",
+        "location": "Back Field 4",
+        "time": "Nov. 9 - 1:30:00 PM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Football - Varsity Boys",
+        "location": "Shuman Field",
+        "time": "Nov. 9 - 2:00:00 PM",
+        "state": "waiting"
+    },
+    {
+        "display-name": "Cross Country - Boys' and Girls' Varsity",
+        "location": "Peddie Golf Course to Campus",
+        "time": "Nov. 9 - 2:45:00 PM",
+        "state": "waiting"
+    }
+]
+```
