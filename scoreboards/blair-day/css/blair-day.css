@@ -4,6 +4,11 @@ title-widget {
     margin-right: auto;
 }
 
+p {
+    /* doesn't work */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+
 .school-img {
     height: 200px;
     grid-row: 1;
@@ -26,7 +31,7 @@ title-widget {
 #total-score-display {
     display: grid;
     grid-template-rows: max-content;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto;
     width: max-content;
     text-align: center;
     margin: auto;
@@ -58,8 +63,12 @@ title-widget {
     text-align: center;
 }
 
+#peddie-score-value {
+    padding-right: 3px;
+}
+
 #blair-score-value {
-    padding-left: 100px;
+    padding-left: 3px;
 }
 
 .event-grid {

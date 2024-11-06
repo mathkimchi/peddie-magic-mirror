@@ -1,6 +1,7 @@
 :root {
     --peddie-gold: #cc9800;
-    --peddie-blue: #0B233F;
+    /* --peddie-blue: #0B233F; */
+    --peddie-blue: #153256;
 }
 
 body {
