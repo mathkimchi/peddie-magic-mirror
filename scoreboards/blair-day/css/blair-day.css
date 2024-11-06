@@ -4,9 +4,16 @@ title-widget {
     margin-right: auto;
 }
 
-p {
-    /* doesn't work */
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .school-img {
@@ -19,7 +26,7 @@ p {
     width: max-content;
     color: white;
     font-size: 240px;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     display: flex;
     vertical-align: center;
     padding-left: 20px;
@@ -39,7 +46,7 @@ p {
 
 .wins h4 {
     padding-top: 30px;
-    font-family: 'Brandon Grotesque', sans-serif;
+    /* font-family: 'Brandon Grotesque', sans-serif; */
     font-style: italic;
 }
 
