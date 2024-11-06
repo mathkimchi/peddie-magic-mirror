@@ -29,6 +29,12 @@ function registerEvent(eventName, eventLocation, eventState) {
             newEventName.innerText = eventName;
             eventList.appendChild(newEventName);
         }
+        if (eventState == "tie") {
+            eventList = document.getElementById("ties");
+            const newEventName = document.createElement("p");
+            newEventName.innerText = eventName;
+            eventList.appendChild(newEventName);
+        }
         return;
     } else if (eventState == "ongoing") {
         // current event
