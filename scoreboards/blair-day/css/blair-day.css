@@ -44,7 +44,13 @@ p2 {
     margin: auto;
 }
 
-.wins h4 {
+.grid-container p{
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+.wins, .ties h4 {
     padding-top: 30px;
     /* font-family: 'Brandon Grotesque', sans-serif; */
     font-style: italic;
