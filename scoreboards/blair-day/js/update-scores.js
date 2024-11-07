@@ -82,24 +82,24 @@ function updateEvents(events) {
 
     document.getElementById("peddie-score-value").innerText = peddieScore;
     document.getElementById("blair-score-value").innerText = blairScore;
-    
+
 }
 
-function randomizeComplaints() {
-    var addresses = [
-        " cli-26@peddie.org",
-        " cli-26@peddie.org",
-        " lpan-wang-26@peddie.org",
-        " tchevres-24@peddie.org",
-        " tchevres@princeton.edu",
-        " dailydose@peddie.org",
-        " definitelyarealemail@peddie.org",
-        " wewillnotbecheckingthese@peddie.org",
-        " wedonthaveourownemail@peddie.org"
-      ];
-      
-      document.getElementById('complaints').innerText += addresses[Math.floor(Math.random()*addresses.length)];
-}
+// function randomizeComplaints() {
+//     var addresses = [
+//         " cli-26@peddie.org",
+//         " cli-26@peddie.org",
+//         " lpan-wang-26@peddie.org",
+//         " tchevres-24@peddie.org",
+//         " tchevres@princeton.edu",
+//         " dailydose@peddie.org",
+//         " definitelyarealemail@peddie.org",
+//         " wewillnotbecheckingthese@peddie.org",
+//         " wedonthaveourownemail@peddie.org"
+//       ];
+
+//       document.getElementById('complaints').innerText += addresses[Math.floor(Math.random()*addresses.length)];
+// }
 
 function update() {
     fetch("../blair-day/data/events.json").then(response => {
@@ -115,4 +115,3 @@ function update() {
 }
 
 update();
-
