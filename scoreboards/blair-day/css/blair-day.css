@@ -42,7 +42,7 @@ p {
 #total-score-display {
     display: grid;
     grid-template-rows: max-content;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: 300px auto auto auto auto auto 300px;
     width: max-content;
     text-align: center;
     margin: auto;
