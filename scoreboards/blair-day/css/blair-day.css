@@ -16,6 +16,10 @@ p2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .school-img {
     height: 200px;
     grid-row: 1;
@@ -44,13 +48,14 @@ p2 {
     margin: auto;
 }
 
-.grid-container p{
+.grid-container p {
     color: white;
     font-style: italic;
     text-align: center;
 }
 
-.wins, .ties h4 {
+.wins,
+.ties h4 {
     padding-top: 30px;
     /* font-family: 'Brandon Grotesque', sans-serif; */
     font-style: italic;
