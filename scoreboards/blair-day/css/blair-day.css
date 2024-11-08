@@ -1,3 +1,8 @@
+body {
+    margin: 0px;
+    background-color: var(--peddie-blue);
+}
+
 title-widget {
     max-width: fit-content;
     margin-left: auto;
