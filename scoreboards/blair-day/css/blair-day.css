@@ -17,6 +17,17 @@ h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+
+h2 {
+    color: var(--peddie-gold);
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'Brandon Grotesque', sans-serif;
+    /* padding-left: 195px; */
+    margin: auto;
+    text-transform: uppercase;
+}
+
 p2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
