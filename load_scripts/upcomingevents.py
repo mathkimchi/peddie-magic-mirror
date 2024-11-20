@@ -31,10 +31,10 @@ with open('data/upcoming.ics', 'r') as file:
 with open('data/upcoming.txt','w') as file:
     text = ""
     for (index, event) in enumerate(calendar.walk('VEVENT')):
+        text += str(event.get("DTSTART").dt.strftime("%m/%d/%Y")) + ": "
         text += event.get("SUMMARY") + "\n"
         text += event.get("DESCRIPTION") + "\n\n"
 
-        # break if this is last with redundant safety
         if not is_event_relevant(event):
             break
     file.write(text)
