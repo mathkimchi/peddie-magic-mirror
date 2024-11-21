@@ -71,10 +71,10 @@ h4 {
     color: var(--peddie-gold);
     font-family: 'Brandon Grotesque';
     text-align: center;
-    font-size: 20px;
+    font-size: 23px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 5px;
+    padding-top: 20px;
     /* text-decoration: underline; */
 }
 
@@ -155,7 +155,7 @@ h4 {
 .item3 {
     grid-column: 3;
     grid-row: 1 / span 2;
-
+    padding-left: 45px;
 }
 
 /*the calligram class is used to style the daily schedule pictures which are changed each period*/
@@ -190,7 +190,7 @@ h4 {
 /*the menu class is used to style the text in the menu2.txt  */
 .menu {
     color: white;
-    font-size: 8px;
+    font-size: 14px;
     font-family: sans-serif;
     display: inline-flex;
     text-align: left;
@@ -209,7 +209,7 @@ h4 {
 /*the calendar class is used to style the text in the calendar2.txt  */
 .calendar {
     color: white;
-    font-size: 8px;
+    font-size: 14px;
     font-family: sans-serif;
     display: inline-flex;
     padding-right: 220px;
@@ -230,9 +230,9 @@ h4 {
 /*the student_section class is used to style the pictues from the Flickr feed for pictures of the week  */
 .student_section {
     color: var(--peddie-gold);
-    font-family: sans-serif;
+    font-family: 'Brandon Grotesque';
     text-align: center;
-    font-size: 20px;
+    font-size: 23px;
     padding-right: 170px;
 }
 
