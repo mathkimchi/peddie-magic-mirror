@@ -11,7 +11,7 @@ response = requests.get(url, headers={"User-Agent":"Mozilla/5.0"}, allow_redirec
 with open('data/upcoming.ics', 'wb') as file:
     file.write(response.content)
 
-with open('data/upcoming.ics', 'r') as file:
+with open('data/upcoming.ics', 'r', errors="ignore") as file:
     calendar = icalendar.Calendar.from_ical(file.read())
 
 # # not currently used
