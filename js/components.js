@@ -69,7 +69,7 @@ customElements.define("pfs-menu-widget", class extends HTMLElement {
                 Menu
     
             </h3>
-            <div><code class="language-python match-braces menu" id="pfs-menu-list"> </code></div>
+            <div><code class="language-python match-braces menu" id="pfs-menu-list" style="font-family: serif;"> </code></div>
         `;
 
 
@@ -99,7 +99,7 @@ customElements.define("graduation-countdown-widget", class extends HTMLElement {
                 Days Until Graduation
             </h4>
             <!-- <div> <code class="language-python match-braces counter" id="portfolio-code6"> </code></div> -->
-            <div id='counterdays' class='counter'>` + days + " Days Left!" + `</div>
+            <div id='counterdays' class='counter' style="font-family: serif;">` + days + " Days Left!" + `</div>
         `;
     }
 });
@@ -170,7 +170,7 @@ customElements.define("upcoming-events-widget", class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <p2> Upcoming Events</p2>
-            <div><code class="language-python match-braces calendar" id="portfolio-code4"> </code></div>
+            <div><code class="language-python match-braces calendar" id="portfolio-code4" style="font-family: serif;"> </code></div>
         `;
 
         fetch(magicMirrorRootPath + "/data/upcoming.txt")
