@@ -49,7 +49,7 @@ def save_events(events: "list[Event]"):
     events.sort(key=lambda event: time_to_int(event))
 
     # only keep the first 17 or less. I feel like if this is going to happen anyways, why also cut after 2 months? but idc
-    events = events[: min(17, len(events))]
+    events = events[: min(10, len(events))]
 
     event_dict_list = [event_to_dict(event) for event in events]
     with open("data/relevant_academic_events.json", "w") as file:

@@ -190,22 +190,18 @@ customElements.define("pictures-of-the-week-widget", class extends HTMLElement {
         this.innerHTML = `
             <div class='student_section'> Pictures of the Week</div>
             <div class='student_section2'>
-        <img src="https://live.staticflickr.com/65535/51746795314_d3636fa4f9.jpg" width="300" height="225" alt="BOYS VARSITY BASKETBALL 2021 PSIT"></a>
-        <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
-
                 <!-- <iframe src="https://www.peddie.org/tv-monitor/student-photography-test-page"></iframe> -->
-                // <div class="embed-responsive">
-                //     <iframe style="position: relative; top: 0; left: 0; width: 100%; height: 100%;"
-                //         src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=72177720328801800&sort=2&by=album&theme=slider&scale=fit&speed=30000&limit=400&skin=default-light&autoplay=true"
-                //         scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true"
-                //         mozallowfullscreen="true">
-                //         <p><a href="https://www.compareboilercover.co.uk">Compare Boiler Cover UK</a></p>
-                //         <small>Powered by <a href="https://flickrembed.com">flickr embed</a>.</small>
-                //     </iframe>
-                //     <script
-                //         type="text/javascript">function showpics() { var a = $("#box").val(); $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a + "&tagmode=any&format=json&jsoncallback=?", function (a) { $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) { $("<img/>").attr("src", e.media.m).appendTo("#images") }) }) }</script>
-                // </div>
-                <a data-flickr-embed='true' href='https://www.flickr.com/photos/peddieschool/sets/72177720328801800' title='Admission Slideshow 2025 by PeddieSchool, on Flickr'><img src='https://live.staticflickr.com/65535/54765172494_96f0270356_b.jpg' width="100%" alt='20241108_BlueGoldChapel_0036'></a><script async src='https://embedr.flickr.com/assets/client-code.js' charset='utf-8'></script>
+                <div class="embed-responsive">
+                <a data-flickr-embed='true' href='https://www.flickr.com/photos/peddieschool/sets/72177720328801800' title='Admission Slideshow 2025 by PeddieSchool, on Flickr'><img src='https://live.staticflickr.com/65535/54765172494_96f0270356_b.jpg' width="50%" alt='20241108_BlueGoldChapel_0036'></a><script async src='https://embedr.flickr.com/assets/client-code.js' charset='utf-8'></script>
+                        src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=72177720328801800&sort=2&by=album&theme=slider&scale=fit&speed=30000&limit=400&skin=default-light&autoplay=true"
+                        scrolling="no" frameborder="0" allowFullScreen="false" webkitallowfullscreen="true"
+                        mozallowfullscreen="true">
+                        <p><a href="https://www.compareboilercover.co.uk">Compare Boiler Cover UK</a></p>
+                        <small>Powered by <a href="https://flickrembed.com">flickr embed</a>.</small>
+                    </iframe>
+                    <script
+                        type="text/javascript">function showpics() { var a = $("#box").val(); $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a + "&tagmode=any&format=json&jsoncallback=?", function (a) { $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) { $("<img/>").attr("src", e.media.m).appendTo("#images") }) }) }</script>
+                </div>
             </div>
             <div class='signature'>
                 (Students: Send your photos to am@peddie.org)
