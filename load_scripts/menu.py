@@ -8,7 +8,7 @@ response = requests.get(
     url, headers={"User-Agent": "Mozilla/5.0"}, allow_redirects=True
 )
 
-# print (response.text)
+print (response.text)
 
 with open("data/menu.ics", "wb") as file:
     file.write(response.content)
@@ -37,6 +37,6 @@ with open("data/menu.txt", "w") as file:
             text += event.get("DESCRIPTION") + "\n\n"
     file.write(text)
 
-# f = open("data/menu.json", "r")
-# print(f.read())
+f = open("data/menu.json", "r")
+print(f.read())
 
