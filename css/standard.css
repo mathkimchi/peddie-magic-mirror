@@ -233,12 +233,12 @@ h4 {
     font-family: 'Brandon Grotesque';
     text-align: center;
     font-size: 23px;
-    padding-right: 170px;
+    /* padding-right: 170px; */
 }
 
 .student_section2 {
     padding-top: 5px;
-    padding-right: 210px;
+    /* padding-right: 210px; */
 }
 
 .magic-mirror {

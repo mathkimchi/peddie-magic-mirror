@@ -48,7 +48,7 @@ def save_events(events: "list[Event]"):
     # sort events from soonest to furthest
     events.sort(key=lambda event: time_to_int(event))
 
-    # only keep the first 17 or less. I feel like if this is going to happen anyways, why also cut after 2 months? but idc
+    # only keep the first 10 or less. I feel like if this is going to happen anyways, why also cut after 2 months? but idc
     events = events[: min(10, len(events))]
 
     event_dict_list = [event_to_dict(event) for event in events]

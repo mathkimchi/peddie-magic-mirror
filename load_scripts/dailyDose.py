@@ -72,6 +72,7 @@ con.login(user, password)
 con.select('Inbox')
 
 # Search for emails
+# tomaz sucks what is this????
 result, email_ids = con.search(None, 'FROM "tchevres-24@peddie.org"','(BODY "From: Daily Dose <dailydose@peddie.org>")')
 
 # Fetching the most recent email
