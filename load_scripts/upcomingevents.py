@@ -33,7 +33,7 @@ with open('data/upcoming.txt','w') as file:
     for (index, event) in enumerate(calendar.walk('VEVENT')):
         text += str(event.get("DTSTART").dt.strftime("%m/%d/%Y")) + ": "
         text += event.get("SUMMARY") + "\n"
-        text += event.get("DESCRIPTION") + "\n\n"
+        # text += event.get("DESCRIPTION") + "\n\n"
 
         if not is_event_relevant(event):
             break

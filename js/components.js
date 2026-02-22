@@ -192,7 +192,7 @@ customElements.define("pictures-of-the-week-widget", class extends HTMLElement {
             <div class='student_section2'>
                 <!-- <iframe src="https://www.peddie.org/tv-monitor/student-photography-test-page"></iframe> -->
                 <div>
-                <a data-flickr-embed='true' href='https://www.flickr.com/photos/peddieschool/sets/72177720328801800' title='Admission Slideshow 2025'><img src='https://live.staticflickr.com/65535/54765172494_96f0270356_b.jpg' width="800 px" alt='20241108_BlueGoldChapel_0036'></a><script async src='https://embedr.flickr.com/assets/client-code.js' charset='utf-8'></script>
+                <a data-flickr-embed='true' href='https://www.flickr.com/photos/peddieschool/sets/72177720328801800' title='Admission Slideshow 2025'><img src='https://live.staticflickr.com/65535/54765172494_96f0270356_b.jpg' width="600 px" alt='20241108_BlueGoldChapel_0036'></a><script async src='https://embedr.flickr.com/assets/client-code.js' charset='utf-8'></script>
                     </iframe>
                 </div>
             </div>
