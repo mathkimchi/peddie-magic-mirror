@@ -69,7 +69,7 @@ customElements.define("pfs-menu-widget", class extends HTMLElement {
                 Menu
     
             </h3>
-            <div><code class="language-python match-braces menu" id="pfs-menu-list" style="font-family: 'open-sans', sans-serif;"> </code></div>"> </code></div>
+            <div><code class="language-python match-braces menu" id="pfs-menu-list" style="font-family: 'open-sans', sans-serif;"> </code></div> </code></div>
         `;
 
 
