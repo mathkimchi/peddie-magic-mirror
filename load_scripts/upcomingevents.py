@@ -29,13 +29,16 @@ with open('data/upcoming.ics', 'r', errors="ignore") as file:
 #     file.write(json.dumps(menu_events, indent=4))
 
 with open('data/upcoming.txt','w') as file:
+    x = 0
     text = ""
     for (index, event) in enumerate(calendar.walk('VEVENT')):
         text += str(event.get("DTSTART").dt.strftime("%m/%d/%Y")) + ": "
         text += event.get("SUMMARY") + "\n"
         # text += event.get("DESCRIPTION") + "\n\n"
 
-        if not is_event_relevant(event):
+        x += 1
+
+        if not is_event_relevant(event) or x>=10:
             break
     file.write(text)
 
