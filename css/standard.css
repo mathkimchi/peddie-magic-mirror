@@ -1,3 +1,5 @@
+@import url('https://use.typekit.net/nci6eod.css');
+
 :root {
     --peddie-gold: #cc9800;
     /* --peddie-blue: #0B233F; */
@@ -48,7 +50,7 @@ h2 {
     color: var(--peddie-gold);
     font-weight: bold;
     font-size: 60px;
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     /* padding-left: 195px; */
     margin: auto;
     /*This padding left used to be the same as with the weather but bc of layout changes it is just centred*/
@@ -57,7 +59,7 @@ h2 {
 /*h3 is the class created to style the Menu div box located on the left hand side of the page */
 h3 {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     padding-left: 20px;
@@ -69,7 +71,7 @@ h3 {
 /*h4 is the class created to style the Days until graduation div box loacted right underneath the menu div box on the left hand side of the page */
 h4 {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     padding-left: 20px;
@@ -110,7 +112,7 @@ h4 {
 /*this just specifies how we want the elements in our grid to be styled*/
 .grid-item {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     font-size: 23px;
 
 }
@@ -118,7 +120,7 @@ h4 {
 /* p vs p2 - p is usuallt the title or the bigger text and p2 is the smaller text*/
 .grid-item p {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     /* text-decoration: underline; */
@@ -126,7 +128,7 @@ h4 {
 
 .grid-item p2 {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     /* text-decoration: underline; */
@@ -183,7 +185,7 @@ h4 {
 .currentblock {
     color: var(--peddie-gold);
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
 }
 
@@ -191,7 +193,7 @@ h4 {
 .menu {
     color: white;
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
 }
@@ -200,7 +202,7 @@ h4 {
 .athletics {
     color: white;
     font-size: 7.5px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
     vertical-align: top;
@@ -210,7 +212,7 @@ h4 {
 .calendar {
     color: white;
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     padding-right: 220px;
     text-align: left;
@@ -221,7 +223,7 @@ h4 {
 .counter {
     color: white;
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: center;
     vertical-align: top;
@@ -230,7 +232,7 @@ h4 {
 /*the student_section class is used to style the pictues from the Flickr feed for pictures of the week  */
 .student_section {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     /* padding-right: 170px; */
@@ -258,7 +260,7 @@ h4 {
 /*the signature class is used to style the text telling students where to submit their pictures */
 .signature {
     color: var(--peddie-gold);
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     text-align: right;
     font-size: 8px;
     padding-right: 260px;
@@ -277,7 +279,7 @@ h4 {
 .weather {
     color: var(--peddie-gold);
     font-size: 12px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
     vertical-align: middle;
@@ -294,7 +296,7 @@ h4 {
 .temp {
     color: var(--peddie-gold);
     font-size: 48px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: center;
     vertical-align: middle;
