@@ -1,7 +1,13 @@
+import re
+
 import requests
 import icalendar
 import json
 import datetime
+
+def respace(text):
+    a = re.sub(r'[–|-][ ]*GF', r'', text) #this doesnt work for some reason too lazy to figure it out lol
+    return re.sub(r'([F|a-z])([A-Z])', r'\1, \2', a) 
 
 url = "https://www.peddie.org/events/month/?tribe_eventcategory%5B0%5D=250&ical=1"
 response = requests.get(
@@ -24,7 +30,7 @@ with open("data/menu.json", "w") as file:
         if menu_time.date() == datetime.date.today():
             menu_event = {}
             menu_event["meal_type"] = event.get("SUMMARY")
-            menu_event["foods"] = event.get("DESCRIPTION")
+            menu_event["foods"] = respace(event.get("DESCRIPTION"))
             menu_events.append(menu_event)
     file.write(json.dumps(menu_events, indent=4))
 
@@ -34,9 +40,8 @@ with open("data/menu.txt", "w") as file:
         menu_time: datetime.datetime = event.get("DTSTART").dt
         if menu_time.date() == datetime.date.today():
             text += event.get("SUMMARY") + "\n"
-            text += event.get("DESCRIPTION") + "\n\n"
+            text += respace(event.get("DESCRIPTION")) + "\n\n"
     file.write(text)
 
 f = open("data/menu.json", "r")
 print(f.read())
-
