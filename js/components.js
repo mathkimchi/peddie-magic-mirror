@@ -160,9 +160,18 @@ customElements.define("athletics-schedule-widget", class extends HTMLElement {
                 <p>Athletics Schedule</p>
             </div>
             <div class='schedule'><code class="language-python match-braces athletics" id="portfolio-code3"> </code>
-
             </div>
         `;
+
+        fetch(magicMirrorRootPath + "/data/athletics.txt")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Bad Response")
+                }
+                return response.text()
+            })
+            .then(text => document.getElementById("portfolio-code3").innerText = text)
+            .catch(errror => document.getElementById("portfolio-code3").innerText = "Unable to fetch portfolio, try again later")
     }
 });
 

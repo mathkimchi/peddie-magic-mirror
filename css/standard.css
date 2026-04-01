@@ -201,7 +201,7 @@ h4 {
 /*the athletics class is used to style the text in the athletics4.txt  */
 .athletics {
     color: white;
-    font-size: 7.5px;
+    font-size: 12px;
     font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
