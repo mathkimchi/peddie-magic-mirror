@@ -7,8 +7,8 @@ import datetime
 
 def respace(text):
     text = str(text)
-    a = re.sub(r'[–|-][ ]*GF', r'', text) #this doesnt work for some reason too lazy to figure it out lol
-    return re.sub(r'([F|a-z])([A-Z])', r'\1, \2', a) 
+    a = re.sub(r'[–|-][ ]*GF', r', ', text)
+    return re.sub(r'([a-z])([A-Z])', r'\1, \2', a) 
 
 url = "https://www.peddie.org/events/month/?tribe_eventcategory%5B0%5D=250&ical=1"
 response = requests.get(
