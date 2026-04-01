@@ -6,6 +6,7 @@ import json
 import datetime
 
 def respace(text):
+    text = str(text)
     a = re.sub(r'[–|-][ ]*GF', r'', text) #this doesnt work for some reason too lazy to figure it out lol
     return re.sub(r'([F|a-z])([A-Z])', r'\1, \2', a) 
 
