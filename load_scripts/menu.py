@@ -7,6 +7,7 @@ import datetime
 
 def respace(text):
     text = str(text)
+    text = re.sub("[ ]?[\n]", "", text)
     text = re.sub(r'[ ]*[–|-][ ]*GF', r', ', text)
     text = re.sub(r',[ ]*$' , r'', text)
     return re.sub(r'([a-z])([A-Z])', r'\1, \2', text) 

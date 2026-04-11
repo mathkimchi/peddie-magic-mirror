@@ -38,7 +38,8 @@ with open('data/upcoming.txt','w') as file:
 
         x += 1
 
-        if not is_event_relevant(event) or x>=10:
+        # if not is_event_relevant(event) or x>=10:
+        if x>=10:
             break
     file.write(text)
 
