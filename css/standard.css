@@ -221,7 +221,7 @@ h4 {
     font-size: 14px;
     font-family: "open-sans", sans-serif;
     display: inline-flex;
-    padding-left: 23px;
+    padding-left: 0px;
     /* padding-right: 220px; */
     text-align: left;
     text-justify: inter-word;
