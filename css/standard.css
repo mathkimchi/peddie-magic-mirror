@@ -164,6 +164,7 @@ h4 {
     grid-column: 3;
     grid-row: 1 / span 2;
     padding-right: 120px;
+    padding-left: 60px;
 }
 
 /*the calligram class is used to style the daily schedule pictures which are changed each period*/
