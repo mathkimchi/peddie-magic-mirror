@@ -44,23 +44,23 @@ customElements.define("time-display-widget", class extends HTMLElement {
 });
 
 
-customElements.define("weather-widget", class extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-            <div class="weather-grid-container">
-                <div class="weather-grid-item1">
-                    <img src="${magicMirrorRootPath}/res/weather.png" class="weather_img">
-                </div>
-                <div class="weather-grid-item2">
-                    <code class="language-python match-braces temp" id="portfolio-code5temp">64&deg;F</code>
-                </div>
-                <div class="weather-grid-item3">
-                    <code class="language-python match-braces weather" id="portfolio-code5"></code>
-                </div>
-            </div>
-        `;
-    }
-});
+// customElements.define("weather-widget", class extends HTMLElement {
+//     connectedCallback() {
+//         this.innerHTML = `
+//             <div class="weather-grid-container">
+//                 <div class="weather-grid-item1">
+//                     <img src="${magicMirrorRootPath}/res/weather.png" class="weather_img">
+//                 </div>
+//                 <div class="weather-grid-item2">
+//                     <code class="language-python match-braces temp" id="portfolio-code5temp">64&deg;F</code>
+//                 </div>
+//                 <div class="weather-grid-item3">
+//                     <code class="language-python match-braces weather" id="portfolio-code5"></code>
+//                 </div>
+//             </div>
+//         `;
+//     }
+// });
 
 customElements.define("pfs-menu-widget", class extends HTMLElement {
     connectedCallback() {
