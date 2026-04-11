@@ -99,7 +99,7 @@ customElements.define("graduation-countdown-widget", class extends HTMLElement {
                 Days Until Graduation
             </h4>
             <!-- <div> <code class="language-python match-braces counter" id="portfolio-code6"> </code></div> -->
-            <div id='counterdays' class='counter' style="font-family: 'open-sans', sans-serif;">` + days + " Days Left!" + `</div>
+            <div id='counterdays' class='counter' style="font-family: 'open-sans', sans-serif; font-size: 23px;">` + days + " Days Left!" + `</div>
         `;
     }
 });

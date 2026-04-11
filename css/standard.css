@@ -146,7 +146,7 @@ h4 {
     padding-left: 50px;
 }
 
-/*item 2 corresponds to the athletics and daily schedule section*/
+/*item 2 corresponds to the athletics section and daily schedule*/
 .item2 {
     grid-column: 1;
     grid-row: 2;
@@ -156,6 +156,7 @@ h4 {
 }
 
 .item2 p{
+    margin-top: 0px;
     margin-bottom: 0.5rem;
 }
 
@@ -198,7 +199,7 @@ h4 {
 /*the menu class is used to style the text in the menu2.txt  */
 .menu {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
