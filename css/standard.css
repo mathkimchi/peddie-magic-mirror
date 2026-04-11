@@ -2,8 +2,10 @@
 
 :root {
     --peddie-gold: #cc9800;
-    /* --peddie-blue: #0B233F; */
-    --peddie-blue: #153256;
+    --peddie-blue: #0B233F; /*if you use other colors, peddie communications will get mad at you. luckily, you are
+                                a strong, independent webmaster and you can do whatever you want!!*/
+    /* --peddie-blue: #153256; */
+    --longstreet-red: #A13926; /*technically, this color is in the brand guidelines "for select use cases"...*/
 }
 
 body {
@@ -123,6 +125,7 @@ h4 {
     font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
+    padding-bottom: 0px;
     /* text-decoration: underline; */
 }
 
@@ -136,21 +139,24 @@ h4 {
 
 }
 
-/*item 1 corresponds to the time, daily schedule, and athletics schedule that are located on the left side of the mirror side*/
+/*item 1 corresponds to the time and menu that are located on the left side of the mirror side*/
 .item1 {
     grid-column: 1;
     grid-row: 1;
     padding-left: 50px;
 }
 
-/*item 2 currently doesn't correspond to anything because we are stacking the athletics schedule right underneath the daily schedule and expanding 
-  * item 1 to essentially span the entire left side of the mirror side.*/
+/*item 2 corresponds to the athletics and daily schedule section*/
 .item2 {
     grid-column: 1;
     grid-row: 2;
     padding-left: 45x;
     padding-top: 5px;
     /* display:inline-flex; */
+}
+
+.item2 p{
+    margin-bottom: 0.5rem;
 }
 
 /*item 3 corresponds to the Upcoming Events and Pictures of the week section that are located on the right side of the mirror side*/
@@ -209,12 +215,13 @@ h4 {
 }
 
 /*the calendar class is used to style the text in the calendar2.txt  */
-.calendar {
+.calendar{
     color: white;
     font-size: 14px;
     font-family: "open-sans", sans-serif;
     display: inline-flex;
-    padding-right: 220px;
+    padding-left: 23px;
+    /* padding-right: 220px; */
     text-align: left;
     text-justify: inter-word;
 }
