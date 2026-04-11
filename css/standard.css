@@ -198,7 +198,7 @@ h4 {
 /*the menu class is used to style the text in the menu2.txt  */
 .menu {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
@@ -207,7 +207,7 @@ h4 {
 /*the athletics class is used to style the text in the athletics4.txt  */
 .athletics {
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
