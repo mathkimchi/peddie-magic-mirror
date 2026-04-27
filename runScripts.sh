@@ -1,4 +1,4 @@
-# mkdir data
+mkdir -p data
 # mkdir data/teamwise_calendars
 
 # #Run Magic Mirror scripts
