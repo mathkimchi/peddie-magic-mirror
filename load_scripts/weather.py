@@ -19,16 +19,22 @@ def get_weather_data(url):
     soup = bs(html.text, "html.parser")
 
     result = {}
-    result['weather_now'] = soup.find("span", attrs={"id": "wob_dc"}).text
-    result["temp_now"] = soup.find("span", attrs={"id": "wob_tm"}).text
-    result["weather_img"] = "https:" + soup.find("img", attrs={"id": "wob_tci"})["src"]
-    result["humidity"] = soup.find("span", attrs={"id": "wob_hm"}).text
-    result["wind"] = soup.find("span", attrs={"id": "wob_ws"}).text
+    result["temp_now"] = soup.find("span", class_= "term-fgx214").text
+    #result["weather_now"] = soup.find("span", attrs = {"id": "wob_tm"}).text
+    result["weather_now"] = soup.find("span", class_ = "term-fgx226").text
+    # result["weather_img"] = "https:/" + soup.find("img", class_ = "weather-icon")["src"]
+    #result["humidity"] = soup.find("span", attrs={"id": "wob_hm"}).text
+    result["wind"] = soup.find("span", class_= "term-fgx208").text
+    if result["weather_now"] == "    \\   /    " :
+        result["weather_now"] = "sunny"
+    else :
+        result["weather_now"] = "cloudy"
+    print(result)
     return result
 
 
 if __name__ == "__main__":
-    URL = "https://www.google.com/search?lr=lang_en&ie=UTF-8&q=weather+Hightstown+NJ"
+    URL = "https://wttr.in/"
     import argparse
 
     parser = argparse.ArgumentParser(
@@ -49,10 +55,9 @@ if __name__ == "__main__":
     data = get_weather_data(URL)
     file.write(f"{data['temp_now']}\u2109\n")
     file.write(f"{data['weather_now']}\n")
-    file.write(f"Humidity: {data['humidity']}\n")
+    #file.write(f"Humidity: {data['humidity']}\n")
     file.write(f"Wind: {data['wind']}")
-    open('weather.png', 'wb').write(requests.get(data["weather_img"], allow_redirects=True).content)
-
+    # open('weather.png', 'wb').write(requests.get(data["weather_img"], allow_redirects=True).content)
     file.close()
 
 #debugging:
