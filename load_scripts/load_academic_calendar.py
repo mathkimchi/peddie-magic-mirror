@@ -32,7 +32,7 @@ def event_to_dict(event: Event) -> "dict[str, object]":
 
     event_dict["time int"] = time_to_int(event)
     event_dict["formatted date"] = event.decoded("dtstart").strftime("%b %-d")  # type: ignore
-    event_dict["summary"] = event.get("summary")
+    # event_dict["summary"] = event.get("summary")
     event_dict["location"] = event.get("location")  # never used
 
     event_dict["formatted str"] = (

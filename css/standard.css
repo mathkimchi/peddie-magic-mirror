@@ -1,7 +1,11 @@
+@import url('https://use.typekit.net/nci6eod.css');
+
 :root {
     --peddie-gold: #cc9800;
-    /* --peddie-blue: #0B233F; */
-    --peddie-blue: #153256;
+    --peddie-blue: #0B233F; /*if you use other colors, peddie communications will get mad at you. luckily, you are
+                                a strong, independent webmaster and you can do whatever you want!!*/
+    /* --peddie-blue: #153256; */
+    --longstreet-red: #A13926; /*technically, this color is in the brand guidelines "for select use cases"...*/
 }
 
 body {
@@ -48,7 +52,7 @@ h2 {
     color: var(--peddie-gold);
     font-weight: bold;
     font-size: 60px;
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     /* padding-left: 195px; */
     margin: auto;
     /*This padding left used to be the same as with the weather but bc of layout changes it is just centred*/
@@ -57,7 +61,7 @@ h2 {
 /*h3 is the class created to style the Menu div box located on the left hand side of the page */
 h3 {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     padding-left: 20px;
@@ -69,7 +73,7 @@ h3 {
 /*h4 is the class created to style the Days until graduation div box loacted right underneath the menu div box on the left hand side of the page */
 h4 {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     padding-left: 20px;
@@ -110,7 +114,7 @@ h4 {
 /*this just specifies how we want the elements in our grid to be styled*/
 .grid-item {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     font-size: 23px;
 
 }
@@ -118,31 +122,31 @@ h4 {
 /* p vs p2 - p is usuallt the title or the bigger text and p2 is the smaller text*/
 .grid-item p {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
+    padding-bottom: 0px;
     /* text-decoration: underline; */
 }
 
 .grid-item p2 {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     /* text-decoration: underline; */
-    padding-right: 170px;
+    /* padding-right: 170px; */
 
 }
 
-/*item 1 corresponds to the time, daily schedule, and athletics schedule that are located on the left side of the mirror side*/
+/*item 1 corresponds to the time and menu that are located on the left side of the mirror side*/
 .item1 {
     grid-column: 1;
     grid-row: 1;
     padding-left: 50px;
 }
 
-/*item 2 currently doesn't correspond to anything because we are stacking the athletics schedule right underneath the daily schedule and expanding 
-  * item 1 to essentially span the entire left side of the mirror side.*/
+/*item 2 corresponds to the athletics section and daily schedule*/
 .item2 {
     grid-column: 1;
     grid-row: 2;
@@ -151,11 +155,16 @@ h4 {
     /* display:inline-flex; */
 }
 
+.item2 p{
+    margin-bottom: 0.5rem;
+}
+
 /*item 3 corresponds to the Upcoming Events and Pictures of the week section that are located on the right side of the mirror side*/
 .item3 {
     grid-column: 3;
     grid-row: 1 / span 2;
-    padding-left: 45px;
+    padding-right: 120px;
+    padding-left: 60px;
 }
 
 /*the calligram class is used to style the daily schedule pictures which are changed each period*/
@@ -183,7 +192,7 @@ h4 {
 .currentblock {
     color: var(--peddie-gold);
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
 }
 
@@ -191,7 +200,7 @@ h4 {
 .menu {
     color: white;
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
 }
@@ -199,20 +208,21 @@ h4 {
 /*the athletics class is used to style the text in the athletics4.txt  */
 .athletics {
     color: white;
-    font-size: 7.5px;
-    font-family: sans-serif;
+    font-size: 12px;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
     vertical-align: top;
 }
 
 /*the calendar class is used to style the text in the calendar2.txt  */
-.calendar {
+.calendar{
     color: white;
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
-    padding-right: 220px;
+    padding-left: 0px;
+    /* padding-right: 220px; */
     text-align: left;
     text-justify: inter-word;
 }
@@ -221,7 +231,7 @@ h4 {
 .counter {
     color: white;
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: center;
     vertical-align: top;
@@ -230,7 +240,7 @@ h4 {
 /*the student_section class is used to style the pictues from the Flickr feed for pictures of the week  */
 .student_section {
     color: var(--peddie-gold);
-    font-family: 'Brandon Grotesque';
+    font-family: 'brandon-grotesque';
     text-align: center;
     font-size: 23px;
     /* padding-right: 170px; */
@@ -258,7 +268,7 @@ h4 {
 /*the signature class is used to style the text telling students where to submit their pictures */
 .signature {
     color: var(--peddie-gold);
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     text-align: right;
     font-size: 8px;
     padding-right: 260px;
@@ -277,7 +287,7 @@ h4 {
 .weather {
     color: var(--peddie-gold);
     font-size: 12px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: left;
     vertical-align: middle;
@@ -294,7 +304,7 @@ h4 {
 .temp {
     color: var(--peddie-gold);
     font-size: 48px;
-    font-family: sans-serif;
+    font-family: "open-sans", sans-serif;
     display: inline-flex;
     text-align: center;
     vertical-align: middle;

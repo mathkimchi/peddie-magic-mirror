@@ -44,23 +44,23 @@ customElements.define("time-display-widget", class extends HTMLElement {
 });
 
 
-customElements.define("weather-widget", class extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-            <div class="weather-grid-container">
-                <div class="weather-grid-item1">
-                    <img src="${magicMirrorRootPath}/res/weather.png" class="weather_img">
-                </div>
-                <div class="weather-grid-item2">
-                    <code class="language-python match-braces temp" id="portfolio-code5temp">64&deg;F</code>
-                </div>
-                <div class="weather-grid-item3">
-                    <code class="language-python match-braces weather" id="portfolio-code5"></code>
-                </div>
-            </div>
-        `;
-    }
-});
+// customElements.define("weather-widget", class extends HTMLElement {
+//     connectedCallback() {
+//         this.innerHTML = `
+//             <div class="weather-grid-container">
+//                 <div class="weather-grid-item1">
+//                     <img src="${magicMirrorRootPath}/res/weather.png" class="weather_img">
+//                 </div>
+//                 <div class="weather-grid-item2">
+//                     <code class="language-python match-braces temp" id="portfolio-code5temp">64&deg;F</code>
+//                 </div>
+//                 <div class="weather-grid-item3">
+//                     <code class="language-python match-braces weather" id="portfolio-code5"></code>
+//                 </div>
+//             </div>
+//         `;
+//     }
+// });
 
 customElements.define("pfs-menu-widget", class extends HTMLElement {
     connectedCallback() {
@@ -69,7 +69,7 @@ customElements.define("pfs-menu-widget", class extends HTMLElement {
                 Menu
     
             </h3>
-            <div><code class="language-python match-braces menu" id="pfs-menu-list" style="font-family: serif;"> </code></div>
+            <div><code class="language-python match-braces menu" id="pfs-menu-list" style="font-family: 'open-sans', sans-serif;"> </code></div> </code></div>
         `;
 
 
@@ -99,7 +99,7 @@ customElements.define("graduation-countdown-widget", class extends HTMLElement {
                 Days Until Graduation
             </h4>
             <!-- <div> <code class="language-python match-braces counter" id="portfolio-code6"> </code></div> -->
-            <div id='counterdays' class='counter' style="font-family: serif;">` + days + " Days Left!" + `</div>
+            <div id='counterdays' class='counter' style="font-family: 'open-sans', sans-serif; font-size: 23px;">` + days + " Days Left!" + `</div>
         `;
     }
 });
@@ -160,9 +160,18 @@ customElements.define("athletics-schedule-widget", class extends HTMLElement {
                 <p>Athletics Schedule</p>
             </div>
             <div class='schedule'><code class="language-python match-braces athletics" id="portfolio-code3"> </code>
-
             </div>
         `;
+
+        fetch(magicMirrorRootPath + "/data/athletics.txt")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Bad Response")
+                }
+                return response.text()
+            })
+            .then(text => document.getElementById("portfolio-code3").innerText = text)
+            .catch(errror => document.getElementById("portfolio-code3").innerText = "Unable to fetch portfolio, try again later")
     }
 });
 
@@ -170,7 +179,7 @@ customElements.define("upcoming-events-widget", class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <p2> Upcoming Events</p2>
-            <div><code class="language-python match-braces calendar" id="portfolio-code4" style="font-family: serif;"> </code></div>
+            <div><code class="language-python match-braces calendar" id="portfolio-code4" style="font-family: 'open-sans', sans-serif;"> </code></div>
         `;
 
         fetch(magicMirrorRootPath + "/data/upcoming.txt")
@@ -192,12 +201,8 @@ customElements.define("pictures-of-the-week-widget", class extends HTMLElement {
             <div class='student_section2'>
                 <!-- <iframe src="https://www.peddie.org/tv-monitor/student-photography-test-page"></iframe> -->
                 <div>
-                <a data-flickr-embed='true' href='https://www.flickr.com/photos/peddieschool/sets/72177720328801800' title='Admission Slideshow 2025'><img src='https://live.staticflickr.com/65535/54765172494_96f0270356_b.jpg' width="800 px" alt='20241108_BlueGoldChapel_0036'></a><script async src='https://embedr.flickr.com/assets/client-code.js' charset='utf-8'></script>
-                    </iframe>
+                <a data-flickr-embed="true" href="https://www.flickr.com/photos/peddieschool/" title=""><img src="https://live.staticflickr.com/65535/55107072840_8f7edcaa04_h.jpg" width="500" alt=""/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                 </div>
-            </div>
-            <div class='signature'>
-                (Students: Send your photos to am@peddie.org)
             </div>
         `;
     }
