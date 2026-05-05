@@ -207,3 +207,25 @@ customElements.define("pictures-of-the-week-widget", class extends HTMLElement {
         `;
     }
 });
+
+customElements.define("weather-widget", class extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `
+            <h3>
+                Weather
+    
+            </h3>
+            <div><code class="language-python match-braces menu" id="current-weather" style="font-family: 'open-sans', sans-serif;"> </code></div> </code></div>
+        `;
+
+        fetch(magicMirrorRootPath + "/data/weather.txt")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Bad Response")
+                }
+                return response.text()
+            })
+            .then(text => document.getElementById("current-weather").innerText = text)
+            .catch(errror => document.getElementById("current-weather").innerText = "Unable to fetch portfolio, try again later")
+    }
+});
