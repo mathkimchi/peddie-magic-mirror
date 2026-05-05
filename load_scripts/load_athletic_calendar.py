@@ -13,7 +13,7 @@ actTable = soup.find('table')
 
 for row in actTable.find_all("tr", limit=8):
     for tag in row.find_all("td", limit=4):
-        activities += tag.string.strip() +  " "
+        activities += tag.get_text(strip=True) +  " "
     activities += "\n"
 
 with open('data/athletics.txt','w') as file:
