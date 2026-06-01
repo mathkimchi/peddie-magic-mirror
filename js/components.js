@@ -88,11 +88,11 @@ customElements.define("pfs-menu-widget", class extends HTMLElement {
 customElements.define("graduation-countdown-widget", class extends HTMLElement {
     connectedCallback() {
         //calculates the days until graduation
-        var deadline = new Date("May 25, 2025").getTime(); //change this to set the graduation date
+        var deadline = new Date("May 30, 2027").getTime(); //change this to set the graduation date
         var now = new Date().getTime();
         var t = deadline - now;
         var days = Math.ceil(t / (1000 * 60 * 60 * 24)); // round up on the date b/c it counts the time by millis (ex. Sept 30, 11:59:59 = 1000 millis until Oct, but displays 1 full day)
-        if (days < 0) days += 365; //after graduation, start counting down to next year (dont display negative)
+        days = ((days % 365) + 365) % 365; //after graduation, start counting down to next year (dont display negative), double modulo bc js does mod weird
 
         this.innerHTML = `
             <h4>
@@ -208,8 +208,8 @@ customElements.define("pictures-of-the-week-widget", class extends HTMLElement {
     }
 });
 
-customElements.define("weather-widget", class extends HTMLElement{
-    connectedCallback(){
+customElements.define("weather-widget", class extends HTMLElement {
+    connectedCallback() {
         this.innerHTML = `
             <h3>
                 Weather
