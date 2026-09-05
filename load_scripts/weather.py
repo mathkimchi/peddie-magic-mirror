@@ -10,55 +10,21 @@ LANGUAGE = "en-US,en;q=0.5"
 
 
 def get_weather_data(url):
-    session = requests.Session()
-    session.headers["User-Agent"] = USER_AGENT
-    session.headers["Accept-Language"] = LANGUAGE
-    session.headers["Content-Language"] = LANGUAGE
-    html = session.get(url)
-    # create a new soup
-    soup = bs(html.text, "html.parser")
-
-    result = {}
-    result["temp_now"] = soup.find("span", class_= "term-fgx214").text
-    #result["weather_now"] = soup.find("span", attrs = {"id": "wob_tm"}).text
-    result["weather_now"] = soup.find("span", class_ = "term-fgx226").text
-    # result["weather_img"] = "https:/" + soup.find("img", class_ = "weather-icon")["src"]
-    #result["humidity"] = soup.find("span", attrs={"id": "wob_hm"}).text
-    result["wind"] = soup.find("span", class_= "term-fgx208").text
-    if result["weather_now"] == "    \\   /    " :
-        result["weather_now"] = "sunny"
-    else :
-        result["weather_now"] = "cloudy"
-    print(result)
-    return result
-
+    data = requests.get(url).json()
+    current = data["current_condition"][0]
+    info = {}
+    info["temperature"] = current["temp_F"]
+    info["wind"] = current["windspeedMiles"]
+    info["condition"] = current["weatherDesc"][0]["value"]
+    info["weather_code"] = current["weatherCode"]
+    return info
 
 if __name__ == "__main__":
-    URL = "https://wttr.in/"
-    import argparse
-
-    parser = argparse.ArgumentParser(
-        description="Quick Script for Extracting Weather data using Google Weather"
-    )
-    parser.add_argument(
-        "region",
-        nargs="?",
-        help="""Region to get weather for, must be available region.
-                                        Default is your current location determined by your IP Address""",
-        default="",
-    )
-    # parse arguments
-    args = parser.parse_args()
-    region = args.region
-    URL += region
-    # get data
-    data = get_weather_data(URL)
-    file.write(f"{data['temp_now']}\u2109\n")
-    file.write(f"{data['weather_now']}\n")
-    #file.write(f"Humidity: {data['humidity']}\n")
-    file.write(f"Wind: {data['wind']}")
-    # open('weather.png', 'wb').write(requests.get(data["weather_img"], allow_redirects=True).content)
-    file.close()
-
-#debugging:
-print(__file__)
+    URL = "https://wttr.in/?format=j1"
+    weather = get_weather_data(URL)
+    with open("weather.txt", "w") as file:
+        file.write(f"{weather['temperature']}°F\n")
+        file.write(f"Wind: {weather['wind']}mph\n")
+        file.write(f"{weather['condition']}\n")
+        file.write(f"{weather['weather_code']}")
+    print(weather)
