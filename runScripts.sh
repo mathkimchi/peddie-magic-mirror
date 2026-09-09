@@ -13,4 +13,4 @@ python3 load_scripts/upcomingevents.py
 python3 load_scripts/menu.py
 
 # #Load Weather
-# python3 load_scripts/weather.py
+python3 load_scripts/weather.py
